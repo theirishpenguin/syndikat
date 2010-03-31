@@ -1,0 +1,6 @@
+Syndikat is a simple RSS feed aggregator and parser written in Ruby. To use it
+just configure your feeds in config.rb and then run syndikat simply with
+'ruby syndikat'
+
+Required gems
+* gem install simple-rss

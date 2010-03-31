@@ -49,12 +49,13 @@ class Syndikat
         # So we convert it HTML and then strip out any markup
         plaintext_description = strip_html(CGI.unescapeHTML item.description)
 
-        f.puts "<div class = 'feed_item'>"
-        f.puts "<h2>Title: #{item.title}</h2>"
-        #f.puts "<h2>By: #{item.author}</h2>" # Not working
-        f.puts "<i>Link: <a href ='#{item.link}'> #{item.link} </a></i>"
-        f.puts "<p class ='published'>Published: #{item.pubDate}</p>"
-        f.puts "<p class='content'>#{plaintext_description}</p>"	
+         f.puts "<div class = 'feed_item'>"
+         f.puts "<h2>#{item.title}</h2>"
+         #f.puts "<h2>By: #{item.author}</h2>" # Not working
+         f.puts "<i><a href ='#{item.link}'> #{item.link} </a></i>"
+         f.puts "<p class ='published'>Published: #{item.pubDate}</p>"
+         f.puts "<p class='content'>#{plaintext_description}</p>"       
+
       end
   
       f.puts "</div></body></html>"
